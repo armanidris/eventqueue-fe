@@ -21,11 +21,13 @@ export default function AdminCourts() {
     afterNext: "",
     Last: "",
   });
+  const API_URL = import.meta.env.VITE_API_URL;
+  console.log(API_URL);
 
   // Fetch data courts
   const fetchCourts = async () => {
     try {
-      const res = await fetch("http://192.168.1.99:8000/api/courts");
+      const res = await fetch(`${API_URL}/api/courts`);
       const data = await res.json();
       setCourts(data);
     } catch (err) {
@@ -78,22 +80,19 @@ export default function AdminCourts() {
 
     try {
       setLoading(true);
-      const response = await fetch(
-        `http://192.168.1.99:8000/api/courts/${editingId}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            current: formData.current ? parseInt(formData.current) : null,
-            next: formData.next ? parseInt(formData.next) : null,
-            afterNext: formData.afterNext ? parseInt(formData.afterNext) : null,
-            Last: parseInt(formData.Last),
-          }),
-        }
-      );
+      const response = await fetch(`${API_URL}/api/courts/${editingId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          current: formData.current ? parseInt(formData.current) : null,
+          next: formData.next ? parseInt(formData.next) : null,
+          afterNext: formData.afterNext ? parseInt(formData.afterNext) : null,
+          Last: parseInt(formData.Last),
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("Failed to update court");
@@ -118,15 +117,12 @@ export default function AdminCourts() {
 
     try {
       setLoading(true);
-      const response = await fetch(
-        `http://192.168.1.99:8000/api/courts/${courtId}/reset`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`${API_URL}/api/courts/${courtId}/reset`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (!response.ok) {
         throw new Error("Failed to reset court");

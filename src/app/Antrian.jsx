@@ -5,11 +5,12 @@ function Antrian() {
   const [courts, setCourts] = useState([]);
   const [connectionStatus, setConnectionStatus] = useState("connecting");
   const [lastUpdate, setLastUpdate] = useState(null);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch initial data
   const fetchCourts = async () => {
     try {
-      const res = await fetch("http://192.168.1.99:8000/api/courts");
+      const res = await fetch(`${API_URL}/api/courts`);
       if (!res.ok) throw new Error(res.statusText);
 
       const data = await res.json();
@@ -26,7 +27,7 @@ function Antrian() {
     fetchCourts();
 
     // Setup SSE connection
-    const sseUrl = "http://192.168.1.99:8000/api/sse/courts";
+    const sseUrl = `${API_URL}/api/sse/courts`;
     const eventSource = new EventSource(sseUrl);
 
     eventSource.addEventListener("initial_data", (e) => {

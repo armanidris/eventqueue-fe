@@ -10,10 +10,10 @@ import AdminCourts from "./app/AdminCourts";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/antrian" element={<Antrian />} />
-      <Route path="/tkd" element={<Tkd />} />
-      <Route path="/test" element={<Test />} />
+      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/" element={<Antrian />} />
+      {/* <Route path="/tkd" element={<Tkd />} /> */}
+      {/* <Route path="/test" element={<Test />} /> */}
       <Route path="/operator/:court" element={<Operator />} />
       <Route path="/adminCourts" element={<AdminCourts />} />
     </Routes>

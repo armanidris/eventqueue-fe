@@ -6,6 +6,7 @@ import Tkd from "./app/TaekwonoQueue";
 import Test from "./app/Test";
 import Operator from "./app/Operator";
 import AdminCourts from "./app/AdminCourts";
+import NotFound from "./components/404";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* <Route path="/test" element={<Test />} /> */}
       <Route path="/operator/:court" element={<Operator />} />
       <Route path="/adminCourts" element={<AdminCourts />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

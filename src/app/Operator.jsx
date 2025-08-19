@@ -18,12 +18,13 @@ export default function Operator() {
   const [editMode, setEditMode] = useState(false);
 
   const { court } = useParams();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch data dari backend
   const fetchCourtData = async () => {
     try {
       const res = await fetch(
-        `http://192.168.1.99:8000/api/courts/${encodeURIComponent(court)}`
+        `${API_URL}/api/courts/${encodeURIComponent(court)}`
       );
       const data = await res.json();
       setCourtData(data);
@@ -44,7 +45,7 @@ export default function Operator() {
 
     setLoading(true);
     try {
-      await fetch(`http://192.168.1.99:8000/api/courts/${courtData.id}/next`, {
+      await fetch(`${API_URL}/api/courts/${courtData.id}/next`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
@@ -63,7 +64,7 @@ export default function Operator() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://192.168.1.99:8000/api/courts/${courtData.id}/update-next`,
+        `${API_URL}/api/courts/${courtData.id}/update-next`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

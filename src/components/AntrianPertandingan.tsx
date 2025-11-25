@@ -6,14 +6,27 @@ export default function TaekwondoQueueBoard({ courts }) {
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Header / Judul Aplikasi */}
       <header className="py-6 bg-white shadow-md border-b">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center text-gray-800 tracking-wide">
-          Unhas CUP 2025
-        </h1>
+        <div className="flex flex-row md:flex-row items-center justify-center">
+          <div className="order-1 flex md:flex-row gap-2 items-center">
+            <img src="pemprovsulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Pemprov Sulsel" />
+            <img src="koni-sulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Koni Sulsel" />
+          </div>
+          <div className="order-3 md:order-2 flex flex-col items-center lg:mx-24">
+            <h1 className="text-sm md:text-xl lg:text-2xl font-extrabold text-center text-gray-800 tracking-wide">
+              BK PORPROV 2025 <br />
+              Cabor Taekwondo
+            </h1>
+          </div>
+          <div className="order-2 md:order-3 flex md:flex-row gap-2  items-center">
+            <img src="dispora_sulsel.png" className="h-6 md:h-12 lg:h-16" alt="Dispora Sulsel" />
+            <img src="tisulsel.jpg" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="TI Sulsel" />
+          </div>
+        </div>
       </header>
 
       {/* Konten utama */}
       <main className="flex-1 p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {courts.map((court) => (
             <motion.div
               key={court.name}
@@ -104,7 +117,6 @@ const sampleCourts = [
   { name: "Lapangan A", current: 12, next: 13, afterNext: 14 },
   { name: "Lapangan B", current: 21, next: 22, afterNext: 23 },
   { name: "Lapangan C", current: 31, next: 32, afterNext: 33 },
-  { name: "Lapangan D", current: 41, next: 42, afterNext: null },
 ];
 
 // Cara pakai:

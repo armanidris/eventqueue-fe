@@ -80,6 +80,10 @@ function Antrian() {
 
   return (
     <div className="antrian-container">
+      <AntrianPertandingan
+        courts={courts}
+        onCourtUpdate={fetchCourts} // Fallback jika SSE tidak bekerja
+      />
       <div className={`connection-status ${connectionStatus}`}>
         {connectionStatusMessages[connectionStatus]}
         {lastUpdate && (
@@ -88,11 +92,6 @@ function Antrian() {
           </span>
         )}
       </div>
-
-      <AntrianPertandingan
-        courts={courts}
-        onCourtUpdate={fetchCourts} // Fallback jika SSE tidak bekerja
-      />
     </div>
   );
 }

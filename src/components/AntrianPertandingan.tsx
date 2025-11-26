@@ -43,7 +43,7 @@ export default function TaekwondoQueueBoard({ courts }) {
                 {/* </CardHeader> */}
 
                 <CardContent className="p-4">
-                  <div className="flex flex-col space-y-4">
+                  <div className="flex flex-col space-y-4 ">
                     <AnimatePresence mode="popLayout">
                       {[
                         {
@@ -102,10 +102,20 @@ export default function TaekwondoQueueBoard({ courts }) {
       </main>
 
       {/* Footer */}
-      <footer className="py-4 bg-white border-t text-center text-gray-600 text-sm">
-        <div className="flex items-center justify-center gap-2">
-          <img className="w-6 h-6" src="sportygeek.png" alt="sportygeek" />
-          <span className="font-semibold">sportygeek</span>
+      <footer className="py-4 bg-white border-t text-gray-600 text-sm">
+        <div className="flex flex-row  gap-2 justify-between">
+          <div className="flex flex-col items-center justify-center ms-6 gap-2">
+            <img className="w-6 h-6" src="sportygeek.png" alt="sportygeek" />
+            <span className="font-semibold">sportygeek</span>
+          </div>
+          <div className="flex flex-col text-left gap-2">
+            <span className="font-bold text-3xl ms-6">
+            https://bit.ly/BKPorprovTkd
+            </span>
+          </div>
+          <div className="flex flex-col items-center justify-center me-6 gap-2">
+            <img className="w-16 h-16" src="linkqr.png" alt="Link QR" />
+          </div>
         </div>
       </footer>
     </div>

@@ -71,6 +71,14 @@ function Antrian() {
     };
   }, []);
 
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === "visible") {
+      fetchCourts();
+    }
+  };
+
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+
   const connectionStatusMessages = {
     connecting: "Menghubungkan ke server...",
     connected: "Terhubung real-time",

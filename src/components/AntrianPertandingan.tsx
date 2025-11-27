@@ -108,13 +108,13 @@ export default function TaekwondoQueueBoard({ courts }) {
             <img className="w-6 h-6" src="sportygeek.png" alt="sportygeek" />
             <span className="font-semibold">sportygeek</span>
           </div>
-          <div className="flex flex-col text-left gap-2">
-            <span className="font-bold text-3xl ms-6">
+          <div className="flex flex-col text-left gap-2 self-center">
+            <span className="font-bold text-sm md-text-xl lg:text-3xl ms-6">
             https://bit.ly/BKPorprovTkd
             </span>
           </div>
           <div className="flex flex-col items-center justify-center me-6 gap-2">
-            <img className="w-16 h-16" src="linkqr.png" alt="Link QR" />
+            <img className="w-8 h-8 md:w-12 md-h-12 lg:w-16 lg:h-16" src="linkqr.png" alt="Link QR" />
           </div>
         </div>
       </footer>

@@ -9,7 +9,7 @@ export default function TaekwondoQueueBoard({ courts }) {
         <div className="flex flex-row md:flex-row items-center justify-center">
           <div className="order-1 flex md:flex-row gap-2 items-center">
             <img src="pemprovsulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Pemprov Sulsel" />
-            <img src="koni-sulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Koni Sulsel" />
+            <img src="dispora_sulsel.png" className="h-6 md:h-12 lg:h-16" alt="Dispora Sulsel" />
           </div>
           <div className="order-3 md:order-2 flex flex-col items-center lg:mx-24">
             <h1 className="text-sm md:text-xl lg:text-2xl font-extrabold text-center text-gray-800 tracking-wide">
@@ -18,7 +18,7 @@ export default function TaekwondoQueueBoard({ courts }) {
             </h1>
           </div>
           <div className="order-2 md:order-3 flex md:flex-row gap-2  items-center">
-            <img src="dispora_sulsel.png" className="h-6 md:h-12 lg:h-16" alt="Dispora Sulsel" />
+            <img src="koni-sulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Koni Sulsel" />
             <img src="tisulsel.jpg" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="TI Sulsel" />
           </div>
         </div>

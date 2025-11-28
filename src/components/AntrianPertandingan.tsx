@@ -7,17 +7,17 @@ export default function TaekwondoQueueBoard({ courts }) {
       {/* Header / Judul Aplikasi */}
       <header className="py-6 bg-white shadow-md border-b">
         <div className="flex flex-row md:flex-row items-center justify-center">
-          <div className="order-1 flex md:flex-row gap-2 items-center">
+          <div className="flex md:flex-row gap-2 items-center">
             <img src="pemprovsulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Pemprov Sulsel" />
-            <img src="dispora_sulsel.png" className="h-6 md:h-12 lg:h-16" alt="Dispora Sulsel" />
+            <img src="dispora-sulsel.png" className="w-18 h-6 md:h-12 md:w-24 lg:h-16 lg:w-36" alt="Dispora Sulsel" />
           </div>
-          <div className="order-3 md:order-2 flex flex-col items-center lg:mx-24">
+          <div className="flex flex-col items-center mx-2 md:mx-8 lg:mx-24">
             <h1 className="text-sm md:text-xl lg:text-2xl font-extrabold text-center text-gray-800 tracking-wide">
               BK PORPROV 2025 <br />
               Cabor Taekwondo
             </h1>
           </div>
-          <div className="order-2 md:order-3 flex md:flex-row gap-2  items-center">
+          <div className="flex md:flex-row gap-2  items-center">
             <img src="koni-sulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Koni Sulsel" />
             <img src="tisulsel.jpg" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="TI Sulsel" />
           </div>

@@ -9,7 +9,7 @@ export default function TaekwondoQueueBoard({ courts }) {
         <div className="flex flex-row md:flex-row items-center justify-center">
           <div className="flex md:flex-row gap-2 items-center">
             <img src="pemprovsulsel.png" className="w-6 h-6 md:w-12 md:h-12 lg:w-16 lg:h-16" alt="Pemprov Sulsel" />
-            <img src="dispora-sulsel.png" className="w-18 h-6 md:h-12 md:w-24 lg:h-16 lg:w-36" alt="Dispora Sulsel" />
+            <img src="dispora-sulsel.png" className="w-12 h-6 md:h-12 md:w-28 lg:h-16 lg:w-36" alt="Dispora Sulsel" />
           </div>
           <div className="flex flex-col items-center mx-2 md:mx-8 lg:mx-24">
             <h1 className="text-sm md:text-xl lg:text-2xl font-extrabold text-center text-gray-800 tracking-wide">
